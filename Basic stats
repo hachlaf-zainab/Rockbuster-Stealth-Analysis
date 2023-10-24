@@ -1,0 +1,29 @@
+SELECT MIN(rental_rate) AS min_rent,
+MAX(rental_rate) AS max_rent,
+AVG(rental_rate) AS avg_rent,
+COUNT(rental_rate) AS count_rent_values,
+MIN(release_year) AS min_release_year,
+MAX(release_year) AS max_release_year,
+AVG(release_year) AS avg_release_year,
+COUNT(release_year) AS count_year_values,
+MIN(rental_duration) AS min_rental_duration,
+MAX(rental_duration) AS max_rental_duration,
+AVG(rental_duration) AS avg_rental_duration,
+COUNT(rental_duration)AS count_rental_values,
+MIN(length) AS min_length,
+MAX(length) AS max_length,
+AVG(length) AS avg_length,
+COUNT(length) AS count_length_values,
+MIN(replacement_cost) AS
+min_replacement_cost,
+MAX(replacement_cost) AS
+max_replacement_cost,
+AVG(replacement_cost) AS
+avg_replacement_cost,
+3)CUSTOMER TABLE: NUMERICAL
+The numerical columns are unique IDs,
+better to use mode command.
+COUNT(replacement_cost) AS
+count_replacement_values,
+COUNT(*) AS count_rows
+FROM film;
