@@ -1,0 +1,20 @@
+*Find the top 10 cities within the top10 countries*
+
+WITH top_10_city_cte (customer_id,
+country, city) AS
+(SELECT A.customer_id,C.city,
+D.country
+FROM customer A
+LEFT JOIN address B ON A.address_id =
+B.address_id
+LEFT JOIN city C ON B.city_id = C.city_id
+LEFT JOIN country D ON C.country_ID =
+D.country_ID)
+SELECT city, country,
+COUNT(customer_id) AS cnts
+FROM top_10_city_cte
+GROUP BY 1,
+2
+ORDER BY city,
+cnts DESC
+LIMIT 10;
